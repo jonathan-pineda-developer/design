@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Log & Design</title>
+</head>
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div class="handle" id="handle">
+        </div>
+        <button>
+            <span class="material-symbols-outlined">
+                home
+            </span>
+            <span>home</span>
+        </button>
+        <button>
+            <span class="material-symbols-outlined">
+                search
+            </span>
+            <span>Search</span>
+        </button>
+        <button class="refresh" id="refresh">
+            <span class="material-symbols-outlined">
+                refresh 
+            </span>
+            <span>refresh</span>
+        </button>
+        <button>
+            <span class="material-symbols-outlined">
+                settings
+            </span>
+            <span>settings</span>
+        </button>
+        <button>
+            <span class="material-symbols-outlined">
+                menu_open
+            </span>
+            <span>Close</span>
+        </button>
+    </aside>
+    
+    <div class="color">
+        <label for="colorpicker">Color Picker:</label>
+        <input type="color" id="colorpicker" value="#0000ff">
+    </div>
+
+        <canvas width="600" height="400">    
+        </canvas>
+    <div class="btn-popup"> 
+           <button onclick="togglePopup()" >Abrir Popup</button>
+    </div>
+
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <h3>Popup Content</h3>
+        <p>Este es un popup de ejemplo.</p>
+        <button onclick="togglePopup()">Cerrar</button>
+      </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
