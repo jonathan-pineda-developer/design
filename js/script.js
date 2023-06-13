@@ -38,16 +38,18 @@ canvas.onmouseup = detener;
 const sidebar = document.getElementById("sidebar"),
 handle = document.getElementById("handle");
 
+//manejo de tamaño de barra handle -
 const resize = e => {
     let newWidth =  e.clientX - sidebar.offsetLeft;
             if(newWidth < 54)  newWidth = 54;
         sidebar.style.width = `${newWidth}px`;
 };
+//detener el resize
 const stopResize = e => { 
     window.removeEventListener("mousemove", resize);
     window.removeEventListener("mouseup", stopResize);
 };
-
+//manejo de tamaño de barra handle +
 const initResize = () => { 
     window.addEventListener("mousemove", resize); 
     window.addEventListener( "mouseup", stopResize);
@@ -55,6 +57,7 @@ const initResize = () => {
 handle.addEventListener("mousedown", initResize);
 
 
+//popup de prueba
 function togglePopup() {
   var popup = document.getElementById("popup");
   popup.style.display = (popup.style.display === "none") ? "block" : "none";
