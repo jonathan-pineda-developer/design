@@ -99,6 +99,7 @@ download.addEventListener("click", function(){
     link.delete;
 } 
 );
+
 /*const downloadButton = document.getElementById('downloadButton');
 
 downloadButton.addEventListener('click', function() {
