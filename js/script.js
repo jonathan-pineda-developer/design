@@ -78,6 +78,12 @@ refresh.addEventListener("click", function(){
 
 //configuracion de subir imagen
 const imageUpload = document.getElementById('imageUpload');
+const uploadButton = document.getElementById('uploadButton');
+
+uploadButton.addEventListener('click', function() {
+    imageUpload.click(); // Activa el evento del input de tipo file
+  });
+  
 imageUpload.addEventListener('change', function(e) {
   const file = e.target.files[0];
   const reader = new FileReader();
