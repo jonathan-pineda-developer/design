@@ -92,4 +92,15 @@ canvas{
 padding-left: 60px;
 }
 
-  
+.sidebar {
+  transition: width 0.3s;
+}
+
+canvas {
+  transition: padding-left 0.3s;
+}
+
+.btn-popup,
+.color {
+  transition: padding-left 0.3s;
+}

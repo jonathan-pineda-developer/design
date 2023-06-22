@@ -45,6 +45,9 @@ const resize = e => {
     let newWidth =  e.clientX - sidebar.offsetLeft;
             if(newWidth < 54)  newWidth = 54;
         sidebar.style.width = `${newWidth}px`;
+        canvas.style.paddingLeft = `${newWidth + 6}px`; // Ajusta el padding-left del canvas
+        document.querySelector('.btn-popup').style.paddingLeft = `${newWidth + 6}px`; // Ajusta el padding-left de .btn-popup
+        document.querySelector('.color').style.paddingLeft = `${newWidth + 6}px`; // Ajusta el padding-left de .color
 };
 //detener el resize
 const stopResize = e => { 
