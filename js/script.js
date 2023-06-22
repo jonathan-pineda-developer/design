@@ -1,6 +1,7 @@
 
 
 let canvas = document.querySelector("canvas");
+let canvasId = document.getElementById("canvas");
 let pincel = canvas.getContext("2d");
 pincel.fillStyle = "grey";
 pincel.fillRect(0, 0, 600, 400);
@@ -80,9 +81,11 @@ imageUpload.addEventListener('change', function(e) {
   reader.onload = function(event) {
     const image = new Image();
     image.src = event.target.result;
-
-    // Hacer algo con la imagen cargada, como dibujarla en el canvas
-    // utilizando el contexto del canvas: context.drawImage(image, x, y);
+    
+    
+    image.onload = function() {
+        pincel.drawImage(image, 0, 0); // Dibuja la imagen en las coordenadas (0, 0) del canvas
+      };
   };
 
   reader.readAsDataURL(file);
