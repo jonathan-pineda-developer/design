@@ -12,7 +12,7 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  width: 54px;
+  width: 240px;
   height: 100%;
   padding-top: 20px;
   background: #ffffff;
@@ -89,7 +89,7 @@ body{
     text-align: center;
   }
 canvas{
-padding-left: 60px;
+padding-left: 250px;
 }
 
 .sidebar {
