@@ -4,7 +4,7 @@ let canvas = document.querySelector("canvas");
 let canvasId = document.getElementById("canvas");
 let pincel = canvas.getContext("2d");
 pincel.fillStyle = "grey";
-pincel.fillRect(0, 0, 600, 400);
+pincel.fillRect(50, 50, 900, 400);
     
 
 
