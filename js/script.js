@@ -16,7 +16,8 @@ function dibujar(evento){
     let colores = document.getElementById('colorpicker').value;
     pincel.fillStyle =  colores;
     pincel.beginPath();
-    pincel.arc(x, y, 10, 0, 2 * Math.PI);
+    //define el tamaño del circulo
+    pincel.arc(x, y, 5, 0, 2 * Math.PI);
     pincel.fill();
     console.log(x + " " + y);
 }
@@ -78,12 +79,15 @@ imageUpload.addEventListener('change', function(e) {
   const file = e.target.files[0];
   const reader = new FileReader();
 
+  //subo la imagen al canvas
   reader.onload = function(event) {
     const image = new Image();
     image.src = event.target.result;
     
     
     image.onload = function() {
+        canvasId.width = image.width;// Ajusta el ancho del canvas al ancho de la imagen
+        canvasId.height = image.height;// Ajusta la altura del canvas a la altura de la imagen
         pincel.drawImage(image, 0, 0); // Dibuja la imagen en las coordenadas (0, 0) del canvas
       };
   };
