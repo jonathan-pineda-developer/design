@@ -127,3 +127,10 @@ downloadButton.addEventListener('click', function() {
   link.click();
 });
  */
+
+//oculatar el color picker
+const palette = document.getElementById('palette');
+palette.addEventListener('click', function() {
+    const color = document.getElementById('colorpicker');
+    color.click();
+  });
