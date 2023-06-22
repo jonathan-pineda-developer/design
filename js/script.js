@@ -69,3 +69,44 @@ refresh.addEventListener("click", function(){
     location.reload();
 }
 );
+
+
+//configuracion de subir imagen
+const imageUpload = document.getElementById('imageUpload');
+imageUpload.addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  const reader = new FileReader();
+
+  reader.onload = function(event) {
+    const image = new Image();
+    image.src = event.target.result;
+
+    // Hacer algo con la imagen cargada, como dibujarla en el canvas
+    // utilizando el contexto del canvas: context.drawImage(image, x, y);
+  };
+
+  reader.readAsDataURL(file);
+});
+
+
+//configuracion de descarga de imagen
+const download = document.getElementById("downloadButton");
+download.addEventListener("click", function(){
+    var link = document.createElement('a');
+    link.download = 'download.png';
+    link.href = canvas.toDataURL()
+    link.click();
+    link.delete;
+} 
+);
+/*const downloadButton = document.getElementById('downloadButton');
+
+downloadButton.addEventListener('click', function() {
+  const canvas = document.getElementById('canvas');
+  const dataURL = canvas.toDataURL('image/png');
+  const link = document.createElement('a');
+  link.href = dataURL;
+  link.download = 'imagen_editada.png';
+  link.click();
+});
+ */
